@@ -30,13 +30,13 @@ export default function Skills() {
           {portfolioData.skills.map((group, i) => (
             <div
               key={group.category}
-              className="glass-card rounded-sm p-6 border hover:border-neon-purple/20 transition-all duration-500 group"
+              className="glass-card rounded-sm p-6 border hover:border-neon-green/20 transition-all duration-500 group"
               style={{ transitionDelay: `${i * 100}ms` }}
             >
               {/* Category header */}
               <div className="flex items-center gap-3 mb-5">
-                <span className="text-neon-purple text-xl">{CATEGORY_ICONS[group.category] || '◇'}</span>
-                <h3 className="font-display text-sm tracking-widest text-gray-400 uppercase">
+                <span className="text-neon-green text-xl">{CATEGORY_ICONS[group.category] || '◇'}</span>
+                <h3 className="font-display text-xs tracking-widest text-gray-400 uppercase">
                   {group.category}
                 </h3>
               </div>
@@ -56,6 +56,21 @@ export default function Skills() {
           <p className="font-display text-xs tracking-widest text-neon-blue mb-4">CERTIFICATIONS</p>
           <div className="flex flex-wrap gap-4">
             {portfolioData.certifications.map((cert) => (
+              <div key={cert.name} className="flex items-start gap-2">
+                <span className="text-neon-blue mt-0.5">▸</span>
+                <div>
+                  <span className="font-body text-sm text-white">{cert.name}</span>
+                  <span className="font-display text-xs text-gray-500 ml-2">— {cert.issuer} · {cert.year}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        {/* Education strip */}
+        <div className="mt-12 p-6 border border-neon-blue/20 bg-neon-blue/5 rounded-sm">
+          <p className="font-display text-xs tracking-widest text-neon-blue mb-4">EDUCATION</p>
+          <div className="flex flex-wrap gap-4">
+            {portfolioData.education.map((cert) => (
               <div key={cert.name} className="flex items-start gap-2">
                 <span className="text-neon-blue mt-0.5">▸</span>
                 <div>

@@ -63,10 +63,28 @@ export default function Hero() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 pt-24 pb-16">
         <div className={`transition-all duration-700 ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
 
-          {/* Status badge */}
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 mb-8 border border-neon-green/30 bg-neon-green/5 rounded-sm">
-            <span className="w-2 h-2 rounded-full bg-neon-green animate-pulse" />
-            <span className="font-display text-xs text-neon-green tracking-widest">AVAILABLE FOR WORK</span>
+          {/* Status badges */}
+          <div className="flex flex-wrap items-center gap-3 mb-8">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 border border-neon-green/30 bg-neon-green/5 rounded-sm">
+              <span className="w-2 h-2 rounded-full bg-neon-green animate-pulse" />
+              <span className="font-display text-xs text-neon-green tracking-widest">AVAILABLE FOR WORK</span>
+            </div>
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 border border-neon-green/30 bg-neon-green/5 rounded-sm">
+              <svg
+                className="w-3.5 h-3.5 text-neon-green"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M20 10c0 4.5-8 11-8 11s-8-6.5-8-11a8 8 0 1 1 16 0Z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <span className="font-display text-xs text-neon-green tracking-widest uppercase">{portfolioData.location}</span>
+            </div>
           </div>
 
           {/* Main heading */}
@@ -90,10 +108,14 @@ export default function Hero() {
             {/* Right: Content */}
             <div className="flex-1">
               {/* Typed line */}
-              <div className="h-10 md:h-12 flex items-center mt-6 mb-8">
+              <div className="h-10 md:h-12 flex flex-wrap items-center gap-3 mt-6 mb-8">
                 <span className="font-display text-xl md:text-2xl text-gray-400">
                   {typed}
                   <span className="animate-blink text-neon-purple">|</span>
+                </span>
+                <span className="flex items-center gap-1 text-xl md:text-2xl leading-none" aria-label="Canada and Philippines">
+                  <span role="img" aria-label="Canada flag">🇨🇦</span>
+                  <span role="img" aria-label="Philippines flag">🇵🇭</span>
                 </span>
               </div>
 

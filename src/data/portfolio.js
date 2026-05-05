@@ -64,4 +64,10 @@ skills: [
     { name: "Fabric Analytics Engineer Associate (DP-600)", issuer: "Microsoft", year: "2025" },
     { name: "Unity Certified Associate", issuer: "Unity Technologies", year: "2019" },
   ],
+
+
+  education: [
+    { name: "Master of Data Analytics", issuer: "University of Niagara Falls Canada", year: "January 2025 - June 2026" },
+    { name: "Bachelor of Science in Computer Engineering", issuer: "Adamson University", year: "June 2013 - March 2018" },
+  ],
 };
